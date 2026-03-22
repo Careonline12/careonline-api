@@ -21,7 +21,7 @@ def generate():
         output_path = f"/tmp/guide_{safe_name}_{os.urandom(4).hex()}.pdf"
 
         sys.path.insert(0, os.path.dirname(__file__))
-        from engine import run
+        from moteur import run
         run(quiz_data, os.path.join(os.path.dirname(__file__), 'Data_produits.xlsx'), output_path)
 
         if not os.path.exists(output_path):
